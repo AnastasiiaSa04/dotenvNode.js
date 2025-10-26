@@ -1,7 +1,9 @@
 import fs from "node:fs/promises"
 import dotenv from "dotenv"
+import path from "node:path";
 
-dotenv.config({quiet: true});
+dotenv.config({ path: path.resolve("./.env"), quiet: true });
+
 
 
 const fileName = process.env.FILENAME;
